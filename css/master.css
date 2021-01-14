@@ -1,0 +1,233 @@
+/* globals */
+
+@keyframes projectsWins {
+    0% {transform: translateX(-30em);}
+    100% {transform: translateX(14em);}
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contanier{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header{
+    position:fixed;
+    min-width: 100%;
+    background-color: rgba(0,0,0,0.75);
+    border-bottom-color: red;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding: 0;
+    margin: 0;
+}
+header h1{
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+}
+
+header nav{
+    float: right;
+}
+
+header ul{
+    padding-top: 40px;
+}
+
+header li{
+    display: inline;
+}
+
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: 0.4s;
+}
+
+header a:hover{
+    color: red;
+}
+
+/* summary */
+
+#summary{
+    min-height: 900px;
+    background-image: url('../images/mainBG.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+#summary h1{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 38px;
+}
+
+#summary p{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#summary h2{
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.button{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 150px;
+    margin-left: -35px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+.button a:hover{
+    color: red;
+}
+
+.contanier2{
+    width: 70%;
+    margin: auto;
+}
+
+.box-skills{
+    background-color: rgba(0, 0, 0, 0.75);
+    display: inline-block;
+    align-items: center;
+    max-width: 10%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 5px;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+.box-skills p{
+    text-align: center;
+}
+
+.sk-fa{
+    margin-top: -50px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+/* work */
+
+#work{
+    background-color: lightgray;
+    min-height: 900px;
+}
+
+#work h1{
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+#work p{
+    text-align: center;
+}
+
+.gallery{
+    margin: 0;
+    padding: 0;
+
+}
+
+.gallery article{
+    text-align: center;
+    padding: 5px;
+}
+
+.gallery p{
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.codeButton:hover{
+    background-color: red;
+}
+
+.codeButton{
+    margin: 10px;
+    padding: 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: serif;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#about{
+    min-height: 600px;
+    background-image: url('../images/aboutMe.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    border-top: red 2px solid;
+    min-height: 50px;
+    background-color: black;
+    color: white;
+}
+
+footer a{
+    text-align: center;
+    margin: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s;
+}
+
+footer li{
+    display: inline;
+}
+
+footer a:hover{
+    color: red;
+}
