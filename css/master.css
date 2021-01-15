@@ -219,6 +219,7 @@ footer li{
 
     header .contanier{
         max-height: 150px;
+        min-width: 375px;
         position:absolute;
         width: 80%;
         }
