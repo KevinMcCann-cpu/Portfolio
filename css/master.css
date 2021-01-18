@@ -1,78 +1,42 @@
 /* globals */
+:root{
+--yellow: #F8C537;
+--blue: #022E64;
+--white: #ffffff;
+--black: #000000;
+--pageHeader: 58px;
+--paragraph: 18px;
+}
 
 body{
     width: 80%
-    margin: auto;
+    margin: 0;
     padding: 0;
     font-family:sans-serif;
-    font-size: 15px;
     line-height: 1.5;
-    background-color: black;
+    background-color: #F7F3F5;
+    color: var(--black);
 }
 
 .contanier{
     width: 80%;
     margin: auto;
-/*    border-color: red;
-    border-style: solid;
-    border-width: thin;
-*/
-}
-
-
-
-.boxSkills{
-    display: grid;
-    margin: auto;
     padding: 0;
-    width: 80%;
-    min-width: 80%;
-    height: 450px;
-    grid-template-columns: auto auto auto;
-    grid-gap: 15px;
-}
-
-.skillTree{
-    border-color: red;
-    border-style: solid;
-    border-width: thin;
-    border-radius: 15px;
-    text-align: center;
-    padding-top: 25px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-a{
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover{
-    color: red;
 }
 
 /*HEADER*/
-
 header{
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+    background-color: var(--blue);
 }
 
 header .contanier{
-    max-height: 60px;
-    border-bottom: 2px red solid;
-    border-left: 2px red solid;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, -75px);
-    background-color: #000000;
+    min-height: 60px;
 }
 
 header h1{
+    color: var(--white);
+    font-size: 32px;
     float: left;
-    padding-left: 50px;
-
 }
 
 header ul{
@@ -81,207 +45,167 @@ header ul{
 
 header li{
     display: inline;
+    padding: 10px;
+}
+
+.buttonNav, .projButn{
+    text-align: center;
+    border: none;
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.9s;
+    background-color: var(--blue);
+    font-size: 18px;
     text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 15px;
+    padding: 15px;
+}
+
+.buttonNav:hover, .projButn:hover{
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+.socialNav{
+    display: inline-block;
+    transition: 0.9s;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.socialNav:hover{
+    color: var(--yellow);
+    transform: scale(1.5,1.5);
 }
 
 /*SUMMARY*/
-
 #summary{
-    margin-top: 75px;
-    background-image: url("../images/mainBG.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    min-height: 800px;
+    margin-bottom: auto;
 }
 
-#summary .contanier{
-    min-height: inherit;
+#summary .Welcome h1{
+    font-size: var(--pageHeader);
+    transform: translate(15%,0);
 }
 
-#summary h1{
+#summary .quot p{
+    font-size: 36px;
     text-align: center;
-    font-size: 38px;
 }
 
-#summary p{
+#summary .overVeiw h1{
+    font-size: var(--pageHeader);
+    transform: translate(15%,0);
+}
+
+#summary .summaryPar p{
+    margin: auto;
+    width: 50%;
+    font-size: var(--paragraph);
     text-align: center;
-    font-size: 28px;
 }
 
-#summary h2{
+#summary .skillHeader{
     text-align: center;
-    font-size: 26px;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-position: center;
-    border-radius: 20px;
 }
 
-
-#summary article li{
-    text-align: left;
-    font-size: 20px;
+#summary .boxSkills{
+    margin: auto;
+    width: 50%;
+    display:block;
+    column-count: 2;
 }
 
+#summary .hardSkills, .softSkills{
+    font-size: 18px;
+    text-align: center;
+    border: 2px #F7F3F5 solid;
+
+}
+
+/*WORK*/
 #work{
-    color: #ffffff;
-}
-
-#work h1{
-    font-size: 38px;
-    text-transform: uppercase;
-    text-decoration: underline;
+    margin-bottom: auto;
 }
 
 #work p{
-    font-size: 20px;
-}
-
-#work .projCon{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-}
-
-#work .leftSide, .rightSide{
-    min-width: 600px;
+    margin: auto;
+    font-size: var(--paragraph);
     text-align: center;
-    border: 2px red solid;
-    border-radius: 60px;
 }
 
-
-#about{
-    min-height: 400px;
-    background-image: url("../images/aboutMe.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+#work .workHeader h1{
+    font-size: var(--pageHeader);
+    transform: translate(15%,0);
 }
 
-#about .contanier{
-    min-height: inherit;
-    color: #ffffff;
+#work .projects{
+    vertical-align: top;
+    margin: auto;
+    display:block;
+    column-count: 2;
 }
 
-#about h1{
-    font-size: 28px;
-    text-decoration: underline;
-    text-transform: uppercase;
+#work .pros1, .pros2, .pros3, .pros4{
+    text-align: center;
+    border: 2px #F7F3F5 solid;
+}
+
+#work .image{
+    transition: 0.09s;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    border: 2px black solid;
+}
+
+.image .overlay{
+    left: inherit;
+    transition: 0.9s;
+    position: absolute;
+    background-color: var(--blue);
+    opacity: 0;
+    width: 0;
+    height: inherit;
+}
+
+#work .image:hover .overlay{
+    width: 200px;
+    opacity: 1;
+}
+
+#work .projButn{
+    transform: translate(0,25px);
+}
+
+/*ABOUT ME*/
+#about .aboutHeader h1{
+    font-size: var(--pageHeader);
+    transform: translate(15%,0);
 }
 
 #about p{
-    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    font-size: var(--paragraph);
+    text-align: center;
 }
 
-#about h1, p{
-    background-color: rgba(0,0,0,0.5);
-}
-
+/*FOOTER*/
 footer{
-    min-height: 60px;
+    background-color: var(--blue);
 }
 
 footer .contanier{
-    border-top-color: red;
-    border-top-width: 2px;
-    border-top-style: solid;
-    border-right-color: red;
-    border-right-width: 2px;
-    border-right-style: solid;
-    min-height: inherit;
+    min-height: 60px;
 }
 
 footer ul{
-    text-align: center;
+    float: right;
 }
 
 footer li{
     display: inline;
-    text-decoration: none;
-    padding-left: 15px;
-}
-
-@media only screen
-
-  and (min-device-width: 375px)
-
-/*  and (max-device-width: 812px) */
-
-  and (-webkit-min-device-pixel-ratio: 3) {
-
-      body{
-          width: 80%
-          margin: auto;
-          padding: 0;
-          font-family:sans-serif;
-          font-size: 15px;
-          line-height: 1.5;
-          background-color: black;
-      }
-
-      .boxSkills{
-          display: grid;
-          margin: auto;
-          padding: 0;
-          width: 80%;
-          min-width: 80%;
-          height: 450px;
-          grid-template-columns: auto auto;
-          grid-gap: 10px;
-      }
-
-      header{
-          min-width: inherit;
-          min-height: 200px;
-          padding: 0;
-          margin: 0;
-      }
-
-      header .contanier{
-          position: absolute;
-          min-height: 250px;
-          min-width: inherit;
-
-      }
-      header h1{
-          padding-top: 70px;
-          text-align: center;
-          font-size: 22px;
-      }
-
-      header a{
-        text-align: center;
-      }
-
-      #work{
-          margin-top: 700px;
-      }
-
-      #work p, h1{
-          text-align: center;
-      }
-
-
-      #work .projCon{
-          display: grid;
-          grid-template-columns: auto;
-          grid-gap: 15px;
-
-      }
-
-      #work .leftSide, .rightSide{
-          min-width: 300px;
-          text-align: center;
-          border: 2px red solid;
-          border-radius: 60px;
-      }
-
-      .projectImg{
-        width: 300px;
-      }
-
+    padding: 10px;
 }
