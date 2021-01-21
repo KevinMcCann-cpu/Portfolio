@@ -1,211 +1,184 @@
 /* globals */
 :root{
+--prime: #F7F3F5;
 --yellow: #F8C537;
 --blue: #022E64;
 --white: #ffffff;
 --black: #000000;
 --pageHeader: 58px;
 --paragraph: 18px;
+--bgimg: url("../images/mainBG.jpg")
+}
+
+*{
+    box-sizing: border-box;
 }
 
 body{
-    width: 80%
+    top: 0;
+    left: 0;
+    margin: 0px;
+    height: 100%;
+    font-family: sans-serif serif;
+    line-height: 1.5;
+    background-image: var(--bgimg);
+    background-position: center auto;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+h1, h2, h3{
+    margin: 0px;
+    font-weight: 400;
+}
+
+main{
+    position: relative;
+    top: 150px;
+    margin: 0 7rem;
+    color: var(--prime)
+}
+
+
+header{
+    height: 60px;
+    margin: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    color: var(--prime)
+}
+
+header .menu-btn{
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35;
+    cursor: pointer;
+    transition: all 0.6s ease-out;
+}
+
+header .close{
+    transform: rotate(180deg);
+}
+
+header .btn-line{
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.6s ease-out;
+}
+
+header .close > .btn-line:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+header .close > .btn-line:nth-child(2){
+    opacity: 0;
+}
+
+header .close > .btn-line:nth-child(3){
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+
+#name{
+    width: 40%;
+    background-color: rgba(247, 243, 245, 0.2);
+}
+
+#summary{
+    width: 65%;
+    background-color: rgba(247, 243, 245, 0.2);
+    transform: translate(100px, 0);
+}
+
+main h1{
+    font-size: 6rem;
+    text-align: center;
+}
+
+main h2{
+    font-size: 2.7rem;
+    margin-left: 9rem;
+    text-align: center;
+    transform: translate(-20px, 0);
+}
+
+.highlight{
+    color: var(--yellow);
+}
+
+main .icons{
+    background-color: rgba(247, 243, 245, 0.2);
+    position: relative;
+    margin-top: 2rem;
+    padding-top: 5px;
+    width: 200px;
+    height: 55px;
+    left: 50%;
+}
+
+main .icons a{
+    position: relative;
+    color: var(--yellow);
+    margin: 0 10px;
+}
+
+main .icons a:hover{
+    color: var(--blue);
+    transition: all 0.6s ease-in;
+    cursor: pointer;
+}
+
+main .skill-header{
+    display: block;
+    width: 220px;
+    position: relative;
+    margin: 0px;
+    padding: 5px;
+    left: -100;
+    transform: translate(1460px, 280%);
+}
+
+main .skill-header h3{
     margin: 0;
     padding: 0;
-    font-family:sans-serif;
-    line-height: 1.5;
-    background-color: #F7F3F5;
-    color: var(--black);
-}
-
-.contanier{
-    width: 80%;
-    margin: auto;
-    padding: 0;
-}
-
-/*HEADER*/
-header{
-    background-color: var(--blue);
-}
-
-header .contanier{
-    min-height: 60px;
-}
-
-header h1{
-    color: var(--white);
-    font-size: 32px;
-    float: left;
-}
-
-header ul{
-    float: right;
-}
-
-header li{
-    display: inline;
-    padding: 10px;
-}
-
-.buttonNav, .projButn{
-    text-align: center;
-    border: none;
-    color: var(--white);
-    text-decoration: none;
-    display: inline-block;
-    transition: 0.9s;
-    background-color: var(--blue);
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 15px;
-}
-
-.buttonNav:hover, .projButn:hover{
-    background-color: var(--yellow);
-    color: var(--blue);
-}
-
-.socialNav{
-    display: inline-block;
-    transition: 0.9s;
-    color: var(--white);
-    font-size: 18px;
-}
-
-.socialNav:hover{
+    text-transform: capitalize;
     color: var(--yellow);
-    transform: scale(1.5,1.5);
 }
 
-/*SUMMARY*/
-#summary{
-    margin-bottom: auto;
-}
-
-#summary .Welcome h1{
-    font-size: var(--pageHeader);
-    transform: translate(15%,0);
-}
-
-#summary .quot p{
-    font-size: 36px;
-    text-align: center;
-}
-
-#summary .overVeiw h1{
-    font-size: var(--pageHeader);
-    transform: translate(15%,0);
-}
-
-#summary .summaryPar p{
-    margin: auto;
-    width: 50%;
-    font-size: var(--paragraph);
-    text-align: center;
-}
-
-#summary .skillHeader{
-    text-align: center;
-}
-
-#summary .boxSkills{
-    margin: auto;
-    width: 50%;
-    display:block;
-    column-count: 2;
-}
-
-#summary .hardSkills, .softSkills{
-    font-size: 18px;
-    text-align: center;
-    border: 2px #F7F3F5 solid;
+main #skills{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 150px;
+    right: -85%;
 
 }
 
-/*WORK*/
-#work{
-    margin-bottom: auto;
-}
-
-#work p{
-    margin: auto;
-    font-size: var(--paragraph);
-    text-align: center;
-}
-
-#work .workHeader h1{
-    font-size: var(--pageHeader);
-    transform: translate(15%,0);
-}
-
-#work .projects{
-    vertical-align: top;
-    margin: auto;
-    display:block;
-    column-count: 2;
-}
-
-#work .pros1, .pros2, .pros3, .pros4{
-    text-align: center;
-    border: 2px #F7F3F5 solid;
-}
-
-#work .image{
-    transition: 0.09s;
-    display: inline-block;
-    width: 400px;
-    height: 400px;
-    background-color: red;
-    border: 2px black solid;
-}
-
-.image .overlay{
-    left: inherit;
-    transition: 0.9s;
-    position: absolute;
-    background-color: var(--blue);
-    opacity: 0;
-    width: 0;
-    height: inherit;
-}
-
-#work .image:hover .overlay{
-    width: 200px;
-    opacity: 1;
-}
-
-#work .projButn{
-    transform: translate(0,25px);
-}
-
-/*ABOUT ME*/
-#about .aboutHeader h1{
-    font-size: var(--pageHeader);
-    transform: translate(15%,0);
-}
-
-#about p{
-    margin: auto;
-    width: 50%;
-    font-size: var(--paragraph);
-    text-align: center;
-}
-
-/*FOOTER*/
-footer{
-    background-color: var(--blue);
-}
-
-footer .contanier{
-    min-height: 60px;
-}
-
-footer ul{
-    float: right;
-}
-
-footer li{
-    display: inline;
+main #skills .grid-item{
     padding: 10px;
+    border: 1px var(--blue) solid;
+    background-color: rgba(2, 46, 100, 0.5);
+    color: rgba(248, 197, 55, 0.4);
+    transition: all 0.6s ease-out;
+
+}
+
+main #skills .grid-item:hover{
+    color: var(--yellow);
+    cursor: pointer;
 }
