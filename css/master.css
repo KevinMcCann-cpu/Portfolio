@@ -1,0 +1,160 @@
+body header .nav-btn {
+  transition: all 0.4s ease-in;
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 3px #F8C537 solid;
+  background-color: #022E64;
+  color: #ffffff;
+  cursor: pointer;
+}
+body header .nav-btn:hover {
+  transform: scale(0.9);
+  background-color: #0568e1;
+  border: none;
+}
+body header .nav-btn:hover a {
+  color: #F8C537;
+}
+body header .nav-btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.highlight {
+  color: #F8C537;
+}
+
+body {
+  background-image: url("../images/mainBG.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: -1;
+}
+body header .nav-btn {
+  display: inline-block;
+}
+body #home h1 {
+  position: absolute;
+  font-size: 7rem;
+  margin: 10px;
+  top: 25vh;
+  left: 10vw;
+}
+body #home h2 {
+  position: absolute;
+  font-size: 3rem;
+  margin: 10px;
+  top: 40vh;
+  left: 15vw;
+}
+body #home .icons {
+  display: flex;
+  position: absolute;
+  overflow: visible;
+  color: #F8C537;
+  font-size: 2.6rem;
+  top: 50vh;
+  left: 50vw;
+  padding: 0;
+  margin: 0;
+}
+body #home .icons a {
+  display: inherit;
+  transition: all 0.4s ease-in;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+body #home .icons a:hover {
+  transform: scale(1.6) rotate(360deg);
+  color: #0568e1;
+}
+body #about h1 {
+  position: absolute;
+  font-size: 7rem;
+  margin: 10px;
+  top: 25vh;
+  left: 10vw;
+}
+body #about p {
+  display: block;
+  position: absolute;
+  width: 60%;
+  font-size: 2rem;
+  text-align: center;
+  top: 50vh;
+  left: 20vw;
+}
+body #work h1 {
+  position: absolute;
+  font-size: 7rem;
+  margin: 10px;
+  top: 25vh;
+  left: 10vw;
+  z-index: 2;
+}
+body #work .grid-work {
+  display: grid;
+  position: absolute;
+  grid-template-areas: "grid-Project-1 grid-Project-2 grid-Project-3" "grid-Project-4 grid-Project-5 grid-Project-6";
+  grid-template-rows: repeat(3, 1f);
+  grid-gap: 10px;
+  top: 50vh;
+}
+body #work .grid-work > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 2px red solid;
+}
+body #work .grid-work > div img {
+  width: 150px;
+  height: 150px;
+}
+body #work .grid-work > div a {
+  display: inline;
+  font-size: 1.2rem;
+}
+body footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: #404040;
+}
+body footer h3 {
+  font-size: 0.9rem;
+}
+
+/*# sourceMappingURL=master.css.map */
