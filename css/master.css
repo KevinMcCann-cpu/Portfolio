@@ -22,15 +22,35 @@ body header .nav-btn a {
   text-transform: uppercase;
 }
 
+body #work .grid-work .project-links a {
+  transition: all 0.4s ease-in;
+  padding: 10px;
+  margin: 5px;
+  background-color: #022E64;
+  border-bottom: 3px #F8C537 solid;
+}
+
+body #contact .contact-btn {
+  transition: all 0.4s ease-in;
+  padding: 25px 10px;
+  margin: 5px;
+  border: 2px #F8C537 solid;
+  background-color: #022E64;
+  color: #000000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  overflow: hidden;
 }
 
 .highlight {
+  color: #F8C537;
+}
+
+.current a {
   color: #F8C537;
 }
 
@@ -76,7 +96,7 @@ body #home .icons {
   overflow: visible;
   color: #F8C537;
   font-size: 2.6rem;
-  top: 50vh;
+  top: 35vh;
   left: 50vw;
   padding: 0;
   margin: 0;
@@ -111,6 +131,31 @@ body #about p {
   top: 50vh;
   left: 20vw;
 }
+body #about .icons {
+  display: flex;
+  position: absolute;
+  overflow: visible;
+  color: #F8C537;
+  font-size: 2.6rem;
+  top: 90vh;
+  left: 45vw;
+  padding: 0;
+  margin: 0;
+}
+body #about .icons a {
+  display: inherit;
+  transition: all 0.4s ease-in;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+body #about .icons a:hover {
+  transform: scale(1.6) rotate(360deg);
+  color: #0568e1;
+}
 body #work h1 {
   position: absolute;
   font-size: 7rem;
@@ -121,27 +166,177 @@ body #work h1 {
 }
 body #work .grid-work {
   display: grid;
-  position: absolute;
+  margin: 2rem;
+  margin-top: 40vh;
   grid-template-areas: "grid-Project-1 grid-Project-2 grid-Project-3" "grid-Project-4 grid-Project-5 grid-Project-6";
-  grid-template-rows: repeat(3, 1f);
   grid-gap: 10px;
-  top: 50vh;
 }
-body #work .grid-work > div {
+body #work .grid-work .grid-Project-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto;
-  height: auto;
-  border: 2px red solid;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-1";
 }
-body #work .grid-work > div img {
-  width: 150px;
-  height: 150px;
+body #work .grid-work .grid-Project-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-2";
 }
-body #work .grid-work > div a {
-  display: inline;
+body #work .grid-work .grid-Project-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-3";
+}
+body #work .grid-work .grid-Project-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-4";
+}
+body #work .grid-work .grid-Project-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-5";
+}
+body #work .grid-work .grid-Project-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2%;
+  background-color: #404040;
+  grid-area: "grid-Project-6";
+}
+body #work .grid-work .img {
+  width: 80%;
+  background-color: #022E64;
+}
+body #work .grid-work .img .project-name {
+  font-size: 2rem;
+  color: #F8C537;
+  text-align: center;
+  border-bottom: 2px #F8C537 solid;
+  text-transform: capitalize;
+}
+body #work .grid-work img {
+  width: 100%;
+}
+body #work .grid-work .project-summary {
+  text-align: center;
   font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+body #work .grid-work .project-links {
+  display: flex;
+  justify-content: center;
+}
+body #work .grid-work .project-links a:hover {
+  transform: scale(0.9);
+  background-color: #0568e1;
+  border: none;
+}
+body #work .icons {
+  display: flex;
+  position: absolute;
+  overflow: visible;
+  color: #F8C537;
+  font-size: 2.6rem;
+  top: 35vh;
+  left: 45vw;
+  padding: 0;
+  margin: 0;
+}
+body #work .icons a {
+  display: inherit;
+  transition: all 0.4s ease-in;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+body #work .icons a:hover {
+  transform: scale(1.6) rotate(360deg);
+  color: #0568e1;
+}
+body #contact h1 {
+  position: absolute;
+  font-size: 7rem;
+  margin: 10px;
+  top: 25vh;
+  left: 10vw;
+  z-index: 2;
+}
+body #contact p {
+  display: block;
+  position: absolute;
+  width: 60%;
+  font-size: 2rem;
+  text-align: center;
+  top: 50vh;
+  left: 20vw;
+}
+body #contact .contact-List {
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+}
+body #contact .email, body #contact .phone {
+  width: 400px;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+body #contact .email:hover, body #contact .phone:hover {
+  transform: rotateX(50deg);
+  background-color: #0568e1;
+}
+body #contact a:hover {
+  color: #F8C537;
+}
+body #contact .icons {
+  display: flex;
+  position: absolute;
+  overflow: visible;
+  color: #F8C537;
+  font-size: 2.6rem;
+  top: 90vh;
+  left: 45vw;
+  padding: 0;
+  margin: 0;
+}
+body #contact .icons a {
+  display: inherit;
+  transition: all 0.4s ease-in;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  cursor: pointer;
+}
+body #contact .icons a:hover {
+  transform: scale(1.6) rotate(360deg);
+  color: #0568e1;
 }
 body footer {
   display: flex;
